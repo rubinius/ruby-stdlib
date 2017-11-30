@@ -1,8 +1,7 @@
 # Ruby Standard Library for Rubinius
 
 This repository contains the standard library files that are included in Ruby
-for use on Rubinius. Most of the libraries are unmodified. The Ruby parts of
-the libraries are pre-compiled and included in builds of Rubinius.
+for use on Rubinius. Most of the libraries are unmodified.
 
 ## Deprecation Notice
 
