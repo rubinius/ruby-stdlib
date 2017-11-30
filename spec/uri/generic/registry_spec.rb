@@ -1,0 +1,9 @@
+require 'uri'
+
+describe "URI::Generic#registry" do
+  it "needs to be reviewed for spec completeness"
+end
+
+describe "URI::Generic#registry=" do
+  it "needs to be reviewed for spec completeness"
+end
