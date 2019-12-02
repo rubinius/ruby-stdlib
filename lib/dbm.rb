@@ -1,1 +1,1 @@
-require "rubysl/dbm"
+require "dbm/dbm"

@@ -1,1 +1,1 @@
-require "rubysl/ripper"
+raise NotImplementedError

@@ -1,1 +1,1 @@
-require "rubysl/weakref"
+require "rubysl/weakref/version"

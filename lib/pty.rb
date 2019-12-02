@@ -1,1 +1,1 @@
-require "rubysl/pty"
+require "pty/pty"

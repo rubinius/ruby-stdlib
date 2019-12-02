@@ -1,1 +1,2 @@
-require "rubysl/gdbm"
+require "gdbm/gdbm"
+require "rubysl/gdbm/version"

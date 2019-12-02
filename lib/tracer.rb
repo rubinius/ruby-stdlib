@@ -1,1 +1,1 @@
-require "rubysl/tracer"
+raise NotImplementedError

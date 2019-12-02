@@ -1,25 +1,34 @@
+# This file is generated FFI::FileProcessor from fcntl.rb.ffi.
+
 module Fcntl
-  FD_CLOEXEC  = Rubinius::Config['rbx.platform.fcntl.FD_CLOEXEC']
-  F_DUPFD     = Rubinius::Config['rbx.platform.fcntl.F_DUPFD']
-  F_GETFD     = Rubinius::Config['rbx.platform.fcntl.F_GETFD']
-  F_GETFL     = Rubinius::Config['rbx.platform.fcntl.F_GETFL']
-  F_GETLK     = Rubinius::Config['rbx.platform.fcntl.F_GETLK']
-  F_RDLCK     = Rubinius::Config['rbx.platform.fcntl.F_RDLCK']
-  F_SETFD     = Rubinius::Config['rbx.platform.fcntl.F_SETFD']
-  F_SETFL     = Rubinius::Config['rbx.platform.fcntl.F_SETFL']
-  F_SETLK     = Rubinius::Config['rbx.platform.fcntl.F_SETLK']
-  F_SETLKW    = Rubinius::Config['rbx.platform.fcntl.F_SETLKW']
-  F_UNLCK     = Rubinius::Config['rbx.platform.fcntl.F_UNLCK']
-  F_WRLCK     = Rubinius::Config['rbx.platform.fcntl.F_WRLCK']
-  O_ACCMODE   = Rubinius::Config['rbx.platform.fcntl.O_ACCMODE']
-  O_APPEND    = Rubinius::Config['rbx.platform.fcntl.O_APPEND']
-  O_CREAT     = Rubinius::Config['rbx.platform.fcntl.O_CREAT']
-  O_EXCL      = Rubinius::Config['rbx.platform.fcntl.O_EXCL']
-  O_NDELAY    = Rubinius::Config['rbx.platform.fcntl.O_NDELAY']
-  O_NOCTTY    = Rubinius::Config['rbx.platform.fcntl.O_NOCTTY']
-  O_NONBLOCK  = Rubinius::Config['rbx.platform.fcntl.O_NONBLOCK']
-  O_RDONLY    = Rubinius::Config['rbx.platform.fcntl.O_RDONLY']
-  O_RDWR      = Rubinius::Config['rbx.platform.fcntl.O_RDWR']
-  O_TRUNC     = Rubinius::Config['rbx.platform.fcntl.O_TRUNC']
-  O_WRONLY    = Rubinius::Config['rbx.platform.fcntl.O_WRONLY']
+  FD_CLOEXEC = 1
+  F_DUPFD = 0
+  F_GETFD = 1
+  F_GETFL = 3
+  F_GETLK = 7
+  F_RDLCK = 1
+  F_SETFD = 2
+  F_SETFL = 4
+  F_SETLK = 8
+  F_SETLKW = 9
+  F_UNLCK = 2
+  F_WRLCK = 3
+  O_ACCMODE = 3
+  O_APPEND = 8
+  O_CREAT = 512
+  O_EXCL = 2048
+  O_NDELAY = 4
+  O_NOCTTY = 131072
+  O_NONBLOCK = 4
+  O_RDONLY = 0
+  O_RDWR = 2
+  O_TRUNC = 1024
+  O_WRONLY = 1
+
+
+
+
+
+
 end
+

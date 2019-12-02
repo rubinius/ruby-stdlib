@@ -1,8 +1,8 @@
+# frozen_string_literal: false
 require 'monitor'
 require 'thread'
 require 'drb/drb'
 require 'rinda/rinda'
-require 'enumerator'
 require 'forwardable'
 
 module Rinda
@@ -76,7 +76,7 @@ module Rinda
     # Reset the expiry time according to +sec_or_renewer+.
     #
     # +nil+::    it is set to expire in the far future.
-    # +false+::  it has expired.
+    # +true+::   it has expired.
     # Numeric::  it will expire in that many seconds.
     #
     # Otherwise the argument refers to some kind of renewer object
@@ -246,7 +246,7 @@ module Rinda
     def initialize(place, event, tuple, expires=nil)
       ary = [event, Rinda::Template.new(tuple)]
       super(ary, expires)
-      @queue = Queue.new
+      @queue = Thread::Queue.new
       @done = false
     end
 
@@ -491,7 +491,7 @@ module Rinda
           port.push(entry.value) if port
           @bag.delete(entry)
           notify_event('take', entry.value)
-          return entry.value
+          return port ? nil : entry.value
         end
         raise RequestExpiredError if template.expired?
 
@@ -506,7 +506,7 @@ module Rinda
               port.push(entry.value) if port
               @bag.delete(entry)
               notify_event('take', entry.value)
-              return entry.value
+              return port ? nil : entry.value
             end
             template.wait
           end

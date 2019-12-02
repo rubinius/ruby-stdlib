@@ -1,1 +1,1 @@
-require "rubysl/curses"
+require "curses/curses"

@@ -1,20 +1,21 @@
 # This file is generated FFI::FileProcessor from etc.rb.ffi.
 
 class Struct::Passwd < Rubinius::FFI::Struct
-  layout :pw_name,    Rubinius::Config['rbx.platform.pwd.pw_name.type'].to_sym,
-                      Rubinius::Config['rbx.platform.pwd.pw_name.offset'],
-         :pw_passwd,  Rubinius::Config['rbx.platform.pwd.pw_passwd.type'].to_sym,
-                      Rubinius::Config['rbx.platform.pwd.pw_passwd.offset'],
-         :pw_uid,     Rubinius::Config['rbx.platform.pwd.pw_uid.type'].to_sym,
-                      Rubinius::Config['rbx.platform.pwd.pw_uid.offset'],
-         :pw_gid,     Rubinius::Config['rbx.platform.pwd.pw_gid.type'].to_sym,
-                      Rubinius::Config['rbx.platform.pwd.pw_gid.offset'],
-         :pw_gecos,   Rubinius::Config['rbx.platform.pwd.pw_gecos.type'].to_sym,
-                      Rubinius::Config['rbx.platform.pwd.pw_gecos.offset'],
-         :pw_dir,     Rubinius::Config['rbx.platform.pwd.pw_dir.type'].to_sym,
-                      Rubinius::Config['rbx.platform.pwd.pw_dir.offset'],
-         :pw_shell,   Rubinius::Config['rbx.platform.pwd.pw_shell.type'].to_sym,
-                      Rubinius::Config['rbx.platform.pwd.pw_shell.offset']
+  layout :pw_name, :string, 0,
+         :pw_passwd, :string, 8,
+         :pw_uid, :uid_t, 16,
+         :pw_gid, :gid_t, 20,
+         :pw_gecos, :string, 40,
+         :pw_dir, :string, 48,
+         :pw_shell, :string, 56
+
+
+
+
+
+
+
+
 
   def name; self[:pw_name]; end
   def passwd; self[:pw_passwd]; end
@@ -26,14 +27,18 @@ class Struct::Passwd < Rubinius::FFI::Struct
 end
 
 class Struct::Group < Rubinius::FFI::Struct
-  layout :gr_name,    Rubinius::Config['rbx.platform.grp.gr_name.type'].to_sym,
-                      Rubinius::Config['rbx.platform.grp.gr_name.offset'],
-         :gr_passwd,  Rubinius::Config['rbx.platform.grp.gr_passwd.type'].to_sym,
-                      Rubinius::Config['rbx.platform.grp.gr_passwd.offset'],
-         :gr_gid,     Rubinius::Config['rbx.platform.grp.gr_gid.type'].to_sym,
-                      Rubinius::Config['rbx.platform.grp.gr_gid.offset'],
-         :gr_mem,     Rubinius::Config['rbx.platform.grp.gr_mem.type'].to_sym,
-                      Rubinius::Config['rbx.platform.grp.gr_mem.offset']
+  layout :gr_name, :string, 0,
+         :gr_passwd, :string, 8,
+         :gr_gid, :gid_t, 16,
+         :gr_mem, :pointer, 24
+
+
+
+
+
+
+
+
 
   FFI = Rubinius::FFI
 

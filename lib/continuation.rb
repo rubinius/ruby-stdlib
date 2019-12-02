@@ -1,1 +1,1 @@
-require "rubysl/continuation"
+raise NotImplementedError

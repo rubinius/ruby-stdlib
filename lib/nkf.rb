@@ -1,1 +1,1 @@
-require "rubysl/nkf"
+require "nkf/nkf"

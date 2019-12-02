@@ -1,1 +1,2 @@
-require "rubysl/bigdecimal"
+require "bigdecimal/bigdecimal"
+require "rubysl/bigdecimal/version"
