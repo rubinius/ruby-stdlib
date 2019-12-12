@@ -3,6 +3,8 @@ os:
 - linux
 compiler:
 - clang
+script:
+- echo Ready to build archive
 after_success:
 - "./scripts/build_support.sh archive_stdlib"
 env:
