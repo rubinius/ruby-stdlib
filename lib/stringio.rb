@@ -696,6 +696,7 @@ class StringIO
     d = @__data__
     pos = d.pos
     string = d.string
+    m = Rubinius::Mirror.reflect string
 
     if sep.nil?
       if limit
@@ -705,7 +706,7 @@ class StringIO
       end
       d.pos += line.bytesize
     elsif sep.empty?
-      if stop = string.find_string("\n\n", pos)
+      if stop = m.find_string("\n\n", pos)
         stop += 2
         line = string.byteslice(pos, stop - pos)
         while string.getbyte(stop) == 10
@@ -717,7 +718,7 @@ class StringIO
         d.pos = string.bytesize
       end
     else
-      if stop = string.find_string(sep, pos)
+      if stop = m.find_string(sep, pos)
         if limit && stop - pos >= limit
           stop = pos + limit
         else
