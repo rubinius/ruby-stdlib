@@ -16,7 +16,7 @@ function rbx_package_stdlib {
 
   rm -rf "$(rbx_stdlib_cache_name)"
 
-  tar -czvf "$(rbx_stdlib_cache_name)" ext/ lib/
+  tar -czvf "$(rbx_stdlib_cache_name)" ext/ lib/ bin/
 
   rbx_digest_file "$(rbx_stdlib_cache_name)" "sha512"
 }
