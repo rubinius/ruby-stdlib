@@ -1,3 +1,4 @@
+# frozen_string_literal: false
 #
 #   change-ws.rb -
 #   	$Release Version: 0.9.6$
@@ -16,16 +17,16 @@ require "irb/ext/change-ws.rb"
 module IRB
   module ExtendCommand
 
-    class CurrentWorkingWorkspace<Nop
+    class CurrentWorkingWorkspace < Nop
       def execute(*obj)
-	irb_context.main
+        irb_context.main
       end
     end
 
-    class ChangeWorkspace<Nop
+    class ChangeWorkspace < Nop
       def execute(*obj)
-	irb_context.change_workspace(*obj)
-	irb_context.main
+        irb_context.change_workspace(*obj)
+        irb_context.main
       end
     end
   end
